@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Bestie</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+            background-size: cover;
+            color: white;
+            position: relative;
+        }
+
+        /* Background Photo */
+        body::before {
+            content: "";
+            background: url(IMG_20240915_185742.jpg) no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.2; /* Adjust transparency here */
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .heart {
+            width: 150px;
+            height: 135px;
+            background-color: #ff4c4c;
+            position: relative;
+            margin: 20px auto;
+            transform: rotate(-45deg);
+            animation: pulse 1s infinite;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 150px;
+            height: 135px;
+            background-color: #ff4c4c;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -75px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 75px;
+            top: 0;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+            100% {
+                transform: scale(1) rotate(-45deg);
+            }
+        }
+
+        p {
+            font-size: 1.8em;
+            margin-top: 40px; /* Increased margin to prevent overlap */
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sorry Bestie!</h1>
+    <div class="heart"></div>
+    <p>This is for you</p>
+
+</body>
+</html>
